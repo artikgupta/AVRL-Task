@@ -1,0 +1,258 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* general */
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin: 2rem auto;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0.2ms;
+  animation-direction: alternate;
+}
+
+.one {
+  background-color: red;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.two {
+  background-color: yellow;
+  top: 0;
+
+  right: 0;
+  z-index: 2;
+}
+
+.three {
+  background-color: green;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.four {
+  background-color: blue;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.wrapper .circle {
+  border-radius: 25px;
+}
+
+.btn {
+  padding: 10px 15px;
+  display: inline-block;
+  background-color: rgb(11, 117, 112);
+  color: white;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+}
+
+.leftToRight {
+  animation-name: leftToRight;
+}
+
+.rightToLeft {
+  animation-name: rightToLeft;
+}
+
+.topToBottom {
+  animation-name: topToBottom;
+}
+
+.bottomToTop {
+  animation-name: bottomToTop;
+}
+
+@keyframes leftToRight {
+  0% {
+    width: 50px;
+  }
+
+  100% {
+    width: 150px;
+  }
+}
+
+@keyframes topToBottom {
+  0% {
+    height: 50px;
+  }
+
+  100% {
+    height: 150px;
+  }
+}
+
+@keyframes bottomToTop {
+  0% {
+    height: 50px;
+  }
+
+  100% {
+    height: 150px;
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    width: 50px;
+  }
+
+  100% {
+    width: 150px;
+  }
+}
